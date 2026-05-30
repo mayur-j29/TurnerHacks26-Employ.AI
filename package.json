@@ -1,0 +1,36 @@
+{
+  "name": "employ-ai",
+  "version": "1.0.0",
+  "description": "Hyper-personalized AI-driven career readiness platform",
+  "private": true,
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=true next dev -p 3000",
+    "dev:clean": "rm -rf .next && WATCHPACK_POLLING=true next dev -p 3000",
+    "fix": "rm -rf .next && npm run build",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "postinstall": "node scripts/copy-skulpt.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.7.0",
+    "next": "^14.0.0",
+    "nodemailer": "^8.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "skulpt": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3"
+  }
+}
